@@ -11,6 +11,7 @@ import SocialShare from '../components/social-share'
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
+    const location = get(this.props, 'location')
     const disqusShortname = 'olayinkaos'
     const disqusConfig = {
       identifier: post.slug,
@@ -18,13 +19,15 @@ class BlogPostTemplate extends React.Component {
     }
 
     return (
-      <Layout location={this.props.location}>
+      <Layout location={location}>
         <SEO title={post.title} location={location.href} />
 
         <div className="container">
           <div className="row">
             <div className="two-thirds column">
-              <Link className={blogStyles.backButton} to="/blog">← back to blog</Link>
+              <Link className={blogStyles.backButton} to="/blog">
+                ← back to blog
+              </Link>
 
               <h1 className="post-heading">{post.title}</h1>
               <Img
@@ -46,7 +49,11 @@ class BlogPostTemplate extends React.Component {
               <hr />
 
               <div>
-                <SocialShare url={this.props.location.href} title={post.title} tags={post.tags} />
+                <SocialShare
+                  url={location.href}
+                  title={post.title}
+                  tags={post.tags}
+                />
               </div>
 
               <hr />
