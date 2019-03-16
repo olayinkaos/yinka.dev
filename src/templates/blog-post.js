@@ -19,7 +19,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location}>
-        <SEO title={post.title} />
+        <SEO title={post.title} location={location.href} />
 
         <div className="container">
           <div className="row">
@@ -46,7 +46,7 @@ class BlogPostTemplate extends React.Component {
               <hr />
 
               <div>
-                <SocialShare url={window.location.href} title={post.title} tags={post.tags} />
+                <SocialShare url={this.props.location.href} title={post.title} tags={post.tags} />
               </div>
 
               <hr />

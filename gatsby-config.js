@@ -22,10 +22,10 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: `olayinka omole · software developer`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `I'm olayinka omole, a software developer currently based in London. I mostly build and maintain software that solve first world problems.`,
     author: `olayinkaos`
   },
-  pathPrefix: '/gatsby-contentful-starter',
+  pathPrefix: '/',
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
