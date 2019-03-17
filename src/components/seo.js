@@ -6,7 +6,7 @@ import favicon16 from '../images/favicon-16x16.png'
 import favicon32 from '../images/favicon-32x32.png'
 import favicon96 from '../images/favicon-96x96.png'
 
-function SEO({ description, lang, meta, keywords, title, image, location }) {
+function SEO({ description, lang, meta, keywords, title, image = favicon96, location }) {
   const { site } = useStaticQuery(
     graphql`
       query {

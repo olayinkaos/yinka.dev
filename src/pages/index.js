@@ -19,7 +19,7 @@ class RootIndex extends React.Component {
           <div className="row">
             <div id="intro-shapes-container">
               <div id="intro-shapes" className="a-5">
-                <svg height="210" width="120%">
+                <svg height="210" width="110%">
                   <polygon id="tri-1" points="90,10 140,190 50,210" />
                   <circle
                     id="circle-1"
