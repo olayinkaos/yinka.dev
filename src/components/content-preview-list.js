@@ -12,7 +12,7 @@ export default ({ contents }) => (
       return (
         <li key={c.key}>
           <h5 className="title">{link}</h5>
-          <p
+          <div
             dangerouslySetInnerHTML={{
               __html: c.description,
             }}
