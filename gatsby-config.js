@@ -8,7 +8,8 @@ try {
 // Overwrite the Contentful config with environment variables if they exist
 contentfulConfig = {
   spaceId: process.env.CONTENTFUL_SPACE_ID || contentfulConfig.spaceId,
-  accessToken: process.env.CONTENTFUL_DELIVERY_TOKEN || contentfulConfig.accessToken,
+  accessToken:
+    process.env.CONTENTFUL_DELIVERY_TOKEN || contentfulConfig.accessToken,
 }
 
 const { spaceId, accessToken } = contentfulConfig
@@ -23,11 +24,20 @@ module.exports = {
   siteMetadata: {
     title: `olayinka omole · software developer`,
     description: `I'm olayinka omole, a software developer currently based in London. I mostly build and maintain software that solve first world problems.`,
-    author: `olayinkaos`
+    author: `olayinkaos`,
   },
   pathPrefix: '/',
   plugins: [
-    'gatsby-transformer-remark',
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+          },
+        ],
+      },
+    },
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
@@ -39,8 +49,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: "UA-39129445-13",
+        trackingId: 'UA-39129445-13',
       },
-    }
+    },
   ],
 }

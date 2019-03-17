@@ -8,3 +8,4 @@
 import "./src/styles/skeleton.css"
 import "./src/styles/normalize.css"
 import "./src/styles/custom.css"
+require("prismjs/themes/prism.css")
