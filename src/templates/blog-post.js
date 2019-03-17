@@ -12,7 +12,7 @@ class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
     const location = get(this.props, 'location')
-    const featuredImgSrc = get(post, 'heroImage.fluid.src}')
+    const featuredImgSrc = get(post, 'heroImage.fluid.src')
     const disqusShortname = 'olayinkaos'
     const disqusConfig = {
       identifier: post.slug,
@@ -21,7 +21,12 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={location}>
-        <SEO title={post.title} location={location.href} image={featuredImgSrc} />
+        <SEO
+          title={post.title}
+          location={location.href}
+          image={featuredImgSrc}
+          description={post.description.internal.content}
+        />
 
         <div className="container">
           <div className="row">
@@ -83,6 +88,11 @@ export const pageQuery = graphql`
       heroImage {
         fluid(maxWidth: 1180, background: "rgb:000000") {
           ...GatsbyContentfulFluid_tracedSVG
+        }
+      }
+      description {
+        internal {
+          content
         }
       }
       body {
