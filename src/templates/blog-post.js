@@ -13,7 +13,7 @@ class BlogPostTemplate extends React.Component {
     const post = get(this.props, 'data.contentfulBlogPost')
     const location = get(this.props, 'location')
     const featuredImgSrc = get(post, 'heroImage.fluid.src')
-    const disqusShortname = 'olayinkaos'
+    const disqusShortname = 'yinka-dev'
     const disqusConfig = {
       identifier: post.slug,
       title: post.title,
