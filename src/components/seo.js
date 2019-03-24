@@ -4,7 +4,15 @@ import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 import osLogo from '../images/os-logo.png'
 
-function SEO({ description, lang, meta, keywords, title, image = osLogo, location }) {
+function SEO({
+  description,
+  lang,
+  meta,
+  keywords,
+  title,
+  image = osLogo,
+  location,
+}) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -20,7 +28,11 @@ function SEO({ description, lang, meta, keywords, title, image = osLogo, locatio
 
   const metaDescription = description || site.siteMetadata.description
 
-  if ((!image.includes("https") || !image.includes("http")) && image.includes("ctfassets")) {
+  if (
+    image &&
+    image.includes('ctfassets') &&
+    (!image.includes('https') || !image.includes('http'))
+  ) {
     image = `https:${image}`
   }
 
@@ -86,7 +98,7 @@ function SEO({ description, lang, meta, keywords, title, image = osLogo, locatio
         {
           rel: 'shortcut icon',
           href: `${osLogo}`,
-        }
+        },
       ]}
     />
   )
