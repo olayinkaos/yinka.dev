@@ -20,6 +20,10 @@ function SEO({ description, lang, meta, keywords, title, image = osLogo, locatio
 
   const metaDescription = description || site.siteMetadata.description
 
+  if (!image.includes("https") || !image.includes("http")) {
+    image = `https:${image}`
+  }
+
   return (
     <Helmet
       htmlAttributes={{
