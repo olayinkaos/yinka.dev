@@ -3,7 +3,7 @@ import React from 'react'
 const Footer = () => (
   <footer>
     <div className="container">
-      <div className="two-thirds column">
+      <div className="one-half column">
         <a href="https://twitter.com/olayinkaos">twitter</a> &middot;&nbsp;
         <a href="https://github.com/olayinkaos">github</a> ·&nbsp;
         <a href="https://medium.com/@olayinka.omole">medium</a> ·&nbsp;
@@ -14,8 +14,9 @@ const Footer = () => (
         </a>
       </div>
 
-      <div className="one-third column">
+      <div className="one-half column">
         <div className="text-right">
+          the opinions on this website are my own ·&nbsp;
           &copy; yinka, {new Date().getFullYear()}
         </div>
       </div>
