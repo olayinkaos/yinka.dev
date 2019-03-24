@@ -33,7 +33,7 @@ function SEO({
     image.includes('ctfassets') &&
     (!image.includes('https') || !image.includes('http'))
   ) {
-    image = `https:${image}`
+    image = `https:${image}&v=1`
   }
 
   return (
