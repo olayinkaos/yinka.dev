@@ -9,7 +9,7 @@ class About extends React.Component {
   render() {
     return (
       <Layout location={this.props.location}>
-        <SEO title="about" />
+        <SEO title="about" image={yinkaImage} />
 
         <div className="container">
           <div className="row">
