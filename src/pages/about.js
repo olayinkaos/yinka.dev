@@ -47,7 +47,7 @@ class About extends React.Component {
                     at different organisations, including the largest hotel
                     booking agency in Nigeria, and a couple of Fortune 500
                     companies. You can see my full work history on{' '}
-                    <a href="https://www.linkedin.com/in/olayinka-success-omole-26274b82/">
+                    <a href="https://www.linkedin.com/in/olayinka-omole-26274b82/">
                       LinkedIn
                     </a>
                     .
