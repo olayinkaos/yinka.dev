@@ -33,7 +33,9 @@ function SEO({
     image.includes('ctfassets') &&
     (!image.includes('https') || !image.includes('http'))
   ) {
-    image = `https:${image}&v=1`
+    // removing query params for meta image as
+    // contentful isn't understanding the escaped versions :/
+    image = `https:${image.substr(0, image.indexOf("?"))}`
   }
 
   return (
