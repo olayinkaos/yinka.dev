@@ -33,7 +33,6 @@ export default ({ title, tags, url }) => {
         className="button twitter"
         title={title}
         via={author}
-        hashtags={tags}
       >
         <span className="icon">
           <i className="fa fa-twitter">&nbsp;</i>
