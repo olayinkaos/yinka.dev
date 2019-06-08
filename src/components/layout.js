@@ -5,7 +5,7 @@ import Header from './header'
 import Footer from './footer'
 
 const Layout = ({ children }) => (
-  <div>
+  <div className="page-container">
     <Header />
 
     <main className="main-container">{children}</main>
