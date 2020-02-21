@@ -58,7 +58,7 @@ class RootIndex extends React.Component {
                     <a href="http://medium.com/@olayinka.omole">Medium</a>. You
                     can also just send me a mail if you want to discuss anything
                     interesting -{' '}
-                    <a href="mailto:me@olayinkaos.com">me@olayinkaos.com</a>.
+                    <a href="mailto:olayinka.omole@gmail.com">olayinka.omole@gmail.com</a>.
                   </p>
 
                   <p className="a-3">
