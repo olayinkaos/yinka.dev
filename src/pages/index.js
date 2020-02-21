@@ -4,8 +4,19 @@ import get from 'lodash/get'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import HomeColumn from '../components/home-column'
+import Vivus from 'vivus'
+import Shapes from '../../static/shapes.svg'
 
 class RootIndex extends React.Component {
+  constructor() {
+    super()
+  }
+  componentDidMount() {
+    new Vivus('shapes-container', {
+      duration: 150,
+      file: Shapes,
+    })
+  }
   render() {
     const posts = get(this, 'props.data.allContentfulBlogPost.edges')
     const projects = get(this, 'props.data.allContentfulProject.edges')
@@ -19,21 +30,7 @@ class RootIndex extends React.Component {
           <div className="row">
             <div id="intro-shapes-container">
               <div id="intro-shapes" className="a-5">
-                <svg height="210" width="110%">
-                  <polygon id="tri-1" points="90,10 140,190 50,210" />
-                  <circle
-                    id="circle-1"
-                    cx="170"
-                    cy="100"
-                    r="65"
-                    stroke="orange"
-                    strokeWidth="1"
-                    fill="none"
-                  />
-                  <rect id="hero-rect" x="30" y="100" width="140" height="80" />
-                  <rect id="rect-2" x="160" y="20" width="100" height="60" />
-                  <polygon id="tri-2" points="140,110 280,150 170,200" />
-                </svg>
+                <div id="shapes-container" />
               </div>
             </div>
 
@@ -44,9 +41,9 @@ class RootIndex extends React.Component {
                 <div className="a-3">
                   <p>
                     I'm olayinka omole, or just yinka (pronounced yeen-ka), a
-                    software developer currently based in London. I spend most of
-                    my time building and maintaining software that make people's
-                    lives easier.
+                    software developer currently based in London. I spend most
+                    of my time building and maintaining software that make
+                    people's lives easier.
                     <br />
                   </p>
 

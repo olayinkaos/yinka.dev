@@ -2,56 +2,72 @@
 
 /* == general == */
 .container {
-    width: 85%;
-    max-width: 1174px;
+  width: 85%;
+  max-width: 1174px;
+}
+.page-container {
+  position: relative;
+  min-height: calc(100vh - 24px);
+  padding-bottom: 24px;
+}
+@media (max-width: 480px) {
+  .page-container {
+    padding-bottom: 172px;
+    min-height: calc(100vh - 172px);
+  }
 }
 .main-container {
-    min-height: 75vh;
+  min-height: 75vh;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #222;
-    text-transform: lowercase;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #222;
+  text-transform: lowercase;
 }
 
 a {
-    text-decoration: none;
-    color: #DF861D;
-    padding-bottom: 2px;
+  text-decoration: none;
+  color: #df861d;
+  padding-bottom: 2px;
 }
 
 a:hover {
-    color: rgba(223,134,29, 0.9);
+  color: rgba(223, 134, 29, 0.9);
 }
 
 .text-right {
-    text-align: right;
+  text-align: right;
 }
 
 /* == header == */
 header.navbar {
-    padding: 30px 0;
-    margin-bottom: 30px;
+  padding: 30px 0;
+  margin-bottom: 30px;
 }
 
 header.navbar .logo {
-    font-weight: bolder;
-    font-size: 2rem;
-    display: inline-block;
+  font-weight: bolder;
+  font-size: 2rem;
+  display: inline-block;
 }
 
 header.navbar a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 /* == navigation == */
 nav.primary {
-    float: right;
+  float: right;
 }
 
 ul.nav {
@@ -61,93 +77,98 @@ ul.nav {
 }
 
 ul.nav li {
-   display: inline;
-   float: left;
-   margin: 0 25px;
-   line-height: 30px;
+  display: inline;
+  float: left;
+  margin: 0 25px;
+  line-height: 30px;
 }
 
 /* == main content == */
 #main-content {
-    margin-top: 7rem;
-    min-height: 300px;
+  margin-top: 7rem;
+  min-height: 300px;
 }
 
 .content-list {
-    list-style: none;
-    margin-bottom: 2rem;
+  list-style: none;
+  margin-bottom: 2rem;
 }
 
 .content-list p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .content-list p.subtitle {
-    text-transform: uppercase;
-    color: grey;
-    font-size: 1.35rem;
-    font-weight: 600;
+  text-transform: uppercase;
+  color: grey;
+  font-size: 1.35rem;
+  font-weight: 600;
 }
 
+#intro-shapes-container svg {
+  height: 210px;
+}
 
 footer {
-    border-top: 1px solid #ccc;
-    background-color: #fafafa;
-    padding: 3rem 0;
-    color: grey;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-top: 1px solid #ccc;
+  background-color: #fafafa;
+  padding: 3rem 0;
+  color: grey;
 }
 
 /* == about == */
 #about-image figcaption {
-    font-weight: bolder;
-    color: grey;
-    text-align: center;
+  font-weight: bolder;
+  color: grey;
+  text-align: center;
 }
 
 /* == blog == */
 .content-list .title {
-    margin: 0;
+  margin: 0;
 }
 .blog-content-list li {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 .blog-content-list .subtitle {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
 /* == media queries == */
 @media (min-width: 550px) {
-    #intro-shapes-container {
-        width: 39.3333333333%;
-        float: right;
-    }
-    #intro-text-container {
-        width: 56.6666666667%;
-        float: left;
-    }
+  #intro-shapes-container {
+    width: 39.3333333333%;
+    float: right;
+  }
+  #intro-text-container {
+    width: 56.6666666667%;
+    float: left;
+  }
 }
 
-
 @media only screen and (max-width: 640px) {
-    ul.nav li {
-       margin: 0 10px;
-    }
-    #intro-shapes {
-        margin-bottom: 5rem;
-    }
-    footer .text-right {
-        text-align: left;
-        margin-top: 1.5rem;
-    }
+  ul.nav li {
+    margin: 0 10px;
+  }
+  #intro-shapes {
+    margin-bottom: 5rem;
+  }
+  footer .text-right {
+    text-align: left;
+    margin-top: 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 320px) {
-    ul.nav li {
-       margin: 0 5px;
-    }
-    #intro-shapes {
-        display: none;
-    }
+  ul.nav li {
+    margin: 0 5px;
+  }
+  #intro-shapes {
+    display: none;
+  }
 }
 
 /* == animations and svgs == */
@@ -161,7 +182,9 @@ footer {
     transform: translateX(0);
   }
 }
-.a-1, .a-3, .a-5 {
+.a-1,
+.a-3,
+.a-5 {
   opacity: 0;
   animation: 0.6s fade-in-right ease 0.4s forwards;
 }
@@ -183,71 +206,71 @@ footer {
   }
 }
 .a-4 {
-    opacity: 0;
-    animation: 1s fade-in-up ease 0.4s forwards;
-    animation-delay: 0.8s;
+  opacity: 0;
+  animation: 1s fade-in-up ease 0.4s forwards;
+  animation-delay: 0.8s;
 }
 
 @keyframes circle1 {
-    0% {
-        transform: translate(150px,-20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translate(150px, -20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 circle#circle-1 {
-    animation: circle1 ease 1.5s forwards;
+  animation: circle1 ease 1.5s forwards;
 }
 
 @keyframes rect2 {
-    0% {
-        transform: translate(0,-40px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translate(0, -40px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 rect#rect-2 {
-    fill:none;
-    stroke-width:1;
-    stroke:red;
-    animation: rect2 ease 1.6s forwards;
+  fill: none;
+  stroke-width: 1;
+  stroke: red;
+  animation: rect2 ease 1.6s forwards;
 }
 
 @keyframes tri1 {
-    0% {
-        transform: translate(-140px,0);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translate(-140px, 0);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 polygon#tri-1 {
-    fill:none;
-    stroke:purple;
-    stroke-width:1;
-    animation: tri1 ease 1.7s forwards;
+  fill: none;
+  stroke: purple;
+  stroke-width: 1;
+  animation: tri1 ease 1.7s forwards;
 }
 
 @keyframes tri2 {
-    0% {
-        transform: translate(0,20px);
-    }
-    100% {
-        transform: translateY(0);
-    }
+  0% {
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
 polygon#tri-2 {
-    fill:none;
-    stroke:maroon;
-    stroke-width:1;
-    animation: tri2 ease 1.8s forwards;
+  fill: none;
+  stroke: maroon;
+  stroke-width: 1;
+  animation: tri2 ease 1.8s forwards;
 }
 
 rect#hero-rect {
-    fill:none;
-    stroke-width:1;
-    stroke:blue
+  fill: none;
+  stroke-width: 1;
+  stroke: blue;
 }
