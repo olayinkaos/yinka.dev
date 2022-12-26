@@ -61,15 +61,6 @@ class BlogPostTemplate extends React.Component {
                   tags={post.tags}
                 />
               </div>
-
-              <hr />
-
-              <div className={blogStyles.disqusContainer}>
-                <DiscussionEmbed
-                  shortname={disqusShortname}
-                  config={disqusConfig}
-                />
-              </div>
             </div>
           </div>
         </div>
