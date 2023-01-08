@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import styles from './about.module.css'
+import * as styles from './about.module.css'
 import yinkaImage from '../images/olayinka-omole.jpg'
 
 class About extends React.Component {

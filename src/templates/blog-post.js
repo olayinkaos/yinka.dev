@@ -4,14 +4,16 @@ import Img from 'gatsby-image'
 import get from 'lodash/get'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import blogStyles from './blog-post.module.css'
+import * as blogStyles from './blog-post.module.css'
 import SocialShare from '../components/social-share'
+import { GatsbyImage, getImage, getSrc } from 'gatsby-plugin-image'
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = get(this.props, 'data.contentfulBlogPost')
     const location = get(this.props, 'location')
-    const featuredImgSrc = get(post, 'heroImage.fluid.src')
+    const featuredImg = getImage(get(post, 'heroImage'))
+    const featuredImgSrc = getSrc(get(post, 'heroImage'));
 
     return (
       <Layout location={location}>
@@ -30,11 +32,12 @@ class BlogPostTemplate extends React.Component {
               </Link>
 
               <h1 className="post-heading">{post.title}</h1>
-              <Img
+              {/* <Img
                 className={blogStyles.heroImage}
                 alt={post.title}
                 fluid={post.heroImage.fluid}
-              />
+              /> */}
+              <GatsbyImage image={featuredImg} alt={post.title} />
 
               <h6 className="subtitle">
                 <small>{post.publishDate}</small>
@@ -71,9 +74,7 @@ export const pageQuery = graphql`
       title
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
-        fluid(maxWidth: 1180, background: "rgb:000000") {
-          ...GatsbyContentfulFluid
-        }
+        gatsbyImageData(width: 1180, backgroundColor: "rgb:000000", placeholder: DOMINANT_COLOR)
       }
       description {
         internal {
