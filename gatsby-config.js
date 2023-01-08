@@ -42,6 +42,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sharp',
     'gatsby-plugin-sass',
+    'gatsby-plugin-image',
     {
       resolve: 'gatsby-source-contentful',
       options: contentfulConfig,
@@ -49,7 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GA_TRACKING_CODE,
+        trackingId: process.env.GA_TRACKING_CODE || "LOCAL",
       },
     },
   ],
