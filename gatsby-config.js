@@ -23,7 +23,7 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: `olayinka omole · software developer`,
-    description: `I'm olayinka omole, a software developer currently based in London. I mostly build and maintain software that solve first world problems.`,
+    description: `I'm olayinka omole, a software developer. I spend most of my time building and maintaining software that make people's lives easier.`,
     author: `olayinkaos`,
   },
   pathPrefix: '/',
@@ -50,7 +50,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: process.env.GA_TRACKING_CODE || "LOCAL",
+        trackingId: process.env.GA_TRACKING_CODE || 'LOCAL',
       },
     },
   ],
