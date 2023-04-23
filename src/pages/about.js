@@ -37,7 +37,7 @@ class About extends React.Component {
                 <div className="a-3">
                   <p>
                     I'm olayinka omole, or just yinka (pronounced yeen-ka), a
-                    software developer currently based in London. I spend most
+                    software developer. I spend most
                     of my time building and maintaining software that make
                     people's lives easier.
                   </p>
