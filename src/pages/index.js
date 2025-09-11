@@ -116,7 +116,7 @@ export const pageQuery = graphql`
   query HomeQuery {
     allContentfulBlogPost(
       limit: 3
-      sort: { fields: [publishDate], order: DESC }
+      sort: { publishDate: DESC }
     ) {
       edges {
         node {
@@ -126,7 +126,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulProject(limit: 3, sort: { fields: [date], order: DESC }) {
+    allContentfulProject(limit: 3, sort: { date: DESC }) {
       edges {
         node {
           title
@@ -135,7 +135,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulPhoto(limit: 3, sort: { fields: [createdDate], order: DESC }) {
+    allContentfulPhoto(limit: 3, sort: { createdDate: DESC }) {
       edges {
         node {
           title
