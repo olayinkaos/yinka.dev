@@ -15,11 +15,15 @@ class BlogPostTemplate extends React.Component {
     const featuredImg = getImage(get(post, 'heroImage'))
     const featuredImgSrc = getSrc(get(post, 'heroImage'));
 
+    // Construct the full URL for og:url
+    const slug = get(this.props, 'pageContext.slug')
+    const fullUrl = `https://yinka.dev/blog/${slug}/`
+
     return (
       <Layout location={location}>
         <SEO
           title={post.title}
-          location={location.href}
+          location={fullUrl}
           image={featuredImgSrc}
           description={post.description.internal.content}
         />
@@ -53,7 +57,7 @@ class BlogPostTemplate extends React.Component {
 
               <div>
                 <SocialShare
-                  url={location.href}
+                  url={fullUrl}
                   title={post.title}
                   tags={post.tags}
                 />
